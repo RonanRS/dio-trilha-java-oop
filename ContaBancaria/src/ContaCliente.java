@@ -18,9 +18,10 @@ public class ContaCliente {
         }
     }
 
-    public double calculaSaldoTotal() {
+    public void calculaSaldoTotal() {
         calculaValorChequeEspecial();
-        return saldoTotal = depositoInicial + chequeEspecial;
+        saldoTotal = getDepositoInicial() + getChequeEspecial();
+        setSaldoTotal(saldoTotal);
     }
 
     public void verificaUsoDoChequeEspecial() {
@@ -28,33 +29,30 @@ public class ContaCliente {
             creditoEspecial = saldoTotal;
             System.out.println("Insuficiencia de saldo. A utilizar cheque especial! Usaste " + (chequeEspecial - creditoEspecial) + " do seu Cheque Especial.");
         } else {
-            System.out.println("Ainda tens " + (saldoTotal - chequeEspecial) + " + " + chequeEspecial + " de cheque especial.");
+            System.out.println("Ainda tens " + (saldoTotal - chequeEspecial) + " de saldo" + " + " + chequeEspecial + " de cheque especial.");
         }
+        calculaJurosChequeEspecial();
     }
 
     public void depositaDinheiro(double deposito) {
-        saldoTotal = saldoTotal + deposito;
+        setSaldoTotal(saldoTotal + deposito);
         System.out.println("Fez um depósito de " + deposito + ", seu saldo atual é de: " + saldoTotal);
     }
 
     public void sacaDinheiro(double saque) {
-        saldoTotal = saldoTotal - saque;
+        setSaldoTotal(saldoTotal - saque);
         System.out.println("Fez um saque de " + saque + ", seu saldo atual é de: " + saldoTotal);
     }
 
     public void pagaBoleto(double pagamento) {
-        saldoTotal = saldoTotal - pagamento;
+        setSaldoTotal(saldoTotal - pagamento);
         System.out.println("Pagou o boleto de " + pagamento + ", seu saldo atual é de: " + saldoTotal);
-    }
-
-
-    public void consultaSaldo() {
-        System.out.println("Seu saldo total é de: " + saldoTotal);
     }
 
     public void consultaChequeEspecial() {
         if (saldoTotal < chequeEspecial) {
-            creditoEspecial = creditoEspecial + saldoTotal;
+            creditoEspecial = saldoTotal;
+            System.out.println("Total de cheque especial: " + creditoEspecial);
         } else {
             creditoEspecial = chequeEspecial;
             System.out.println("Total de cheque especial: " + creditoEspecial);
@@ -72,8 +70,9 @@ public class ContaCliente {
         }
     }
 
-    // Getters and Setters
 
+
+    // GETTERS & SETTERS
 
     public String getName() {
         return name;
@@ -102,7 +101,7 @@ public class ContaCliente {
 
     }
 
-    private void setSaldoTotal(int saldoTotal) {
+    private void setSaldoTotal(double saldoTotal) {
         this.saldoTotal = saldoTotal;
     }
 
