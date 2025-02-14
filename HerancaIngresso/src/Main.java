@@ -4,13 +4,14 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        IngressoMeia meia = new IngressoMeia("A menina que roubava livro", "Dublado");
+        IngressoMeia meia = new IngressoMeia("A menina que roubava livro", "Legendado");
         IngressoFamilia familia = new IngressoFamilia("Lisbela e o prisioneiro", "Dublado");
 
+        System.out.println("====== Meia Entrada ======");
         meia.calculaMeia();
-        System.out.println("-------------------------");
-        familia.calculaIngressoFamilia(3);
+
+        System.out.println("====== Ingresso Família ======");
+        familia.calculaIngressoFamilia(2);
 
     }
 }

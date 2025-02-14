@@ -15,7 +15,7 @@ public class IngressoFamilia extends Ingresso{
             System.out.println(dubladoLegendado);
             descontoFamilia = (valor * membrosFamilia) *0.05;
             valorIngressoFamilia = (valor * membrosFamilia) - descontoFamilia;
-            System.out.println("O valor total dos ingressos com 5% de desconto fica em €" + valorIngressoFamilia);
+            System.out.println("O valor dos " + membrosFamilia + " ingressos com 5% de desconto fica em €" + valorIngressoFamilia);
 
         }else
             System.out.println("O desconto família aplica-se apenas para 3 membros ou mais.");
