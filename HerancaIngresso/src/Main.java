@@ -5,13 +5,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        IngressoMeia meia = new IngressoMeia();
-        IngressoFamilia familia = new IngressoFamilia();
+        IngressoMeia meia = new IngressoMeia("A menina que roubava livro", "Dublado");
+        IngressoFamilia familia = new IngressoFamilia("Lisbela e o prisioneiro", "Dublado");
 
         meia.calculaMeia();
-        familia.calculaIngressoFamilia(10);
-
-
+        System.out.println("-------------------------");
+        familia.calculaIngressoFamilia(3);
 
     }
 }
