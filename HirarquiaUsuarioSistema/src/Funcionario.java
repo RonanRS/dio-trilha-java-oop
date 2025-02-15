@@ -2,8 +2,8 @@ public abstract class Funcionario {
     protected String nome;
     protected String email;
     protected String senha;
-    protected int totalVenda;
     protected boolean administrador;
+    protected static int totalVenda;
 
 
 // MÉTODOS ABSTRATOS

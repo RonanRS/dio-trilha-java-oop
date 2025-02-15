@@ -9,12 +9,12 @@ public class Vendedor extends Funcionario{
 
     protected void realizarVenda(){
         System.out.println("Realizando venda...");
-        setTotalVenda(totalVenda++);
+        setTotalVenda(totalVenda + 1);
     }
 
     @Override
     protected void consultarVendas() {
-        System.out.println("Utilizador " + getNome() + " consultando vendas...");
+        System.out.println("Vendedor " + getNome() + " consultando vendas...");
         System.out.println("Total de vendas: " + getTotalVenda());
     }
 
@@ -25,7 +25,7 @@ public class Vendedor extends Funcionario{
 
     @Override
     protected void realizarLogoff() {
-        System.out.println("User " + getNome() + " deslogando...");
+        System.out.println("Utilizador " + getNome() + " deslogando...");
     }
 
     @Override

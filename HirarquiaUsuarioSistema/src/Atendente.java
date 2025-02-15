@@ -9,8 +9,10 @@ public class Atendente extends Funcionario{
     }
 
     protected void receberPagamento(double pagamento){
+        double somaCaixa = valorEmCaixa + pagamento;
         System.out.println("Pagamento recebido: €" + pagamento);
-        System.out.println("Valor total em caixa: €" + (valorEmCaixa + pagamento));
+        System.out.println("Valor total em caixa: €" + somaCaixa);
+        setValorEmCaixa(somaCaixa);
     }
 
     protected void fecharCaixa(){
@@ -19,17 +21,18 @@ public class Atendente extends Funcionario{
 
     @Override
     protected void consultarVendas() {
-
+        System.out.println("Atendente " + getNome() + " consultando vendas...");
+        System.out.println("Total de vendas: " + getTotalVenda());
     }
 
     @Override
     protected void realizarLogins() {
-
+        System.out.println("Realizando login como: " + getNome());
     }
 
     @Override
     protected void realizarLogoff() {
-
+        System.out.println("Utilizador " + getNome() + " deslogando...");
     }
 
     @Override
@@ -42,7 +45,7 @@ public class Atendente extends Funcionario{
 
     @Override
     protected void alterarSenha() {
-
+        System.out.println("Alterando senha do utilizador: " + getNome());
     }
 
     // GETTERS & SETTERS

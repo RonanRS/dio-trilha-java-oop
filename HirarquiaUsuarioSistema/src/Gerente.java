@@ -19,12 +19,12 @@ public class Gerente extends Funcionario{
 
     @Override
     protected void realizarLogins() {
-
+        System.out.println("Realizando login como: " + getNome());
     }
 
     @Override
     protected void realizarLogoff() {
-
+        System.out.println("Utilizador " + getNome() + " deslogando...");
     }
 
     @Override
@@ -38,7 +38,7 @@ public class Gerente extends Funcionario{
 
     @Override
     protected void alterarSenha() {
-
+        System.out.println("Alterando senha do utilizador: " + getNome());
     }
 
 }
