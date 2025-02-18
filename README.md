@@ -81,7 +81,7 @@ classDiagram
     class iPhone {
     }
 
-    iPhone -> Ipod
-    iPhone -> Telefone
-    iPhone -> Internet
+    iPhone --> Ipod
+    iPhone --> Telefone
+    iPhone --> Internet
 ```
