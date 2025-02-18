@@ -75,10 +75,13 @@ classDiagram
     class Internet {
         +ExibirPagina(String url)
         +AdicionarNovaAba()
-        +AtualizarPagina
+        +AtualizarPagina()
     }
 
     class iPhone {
+        +String modelo
+        +Liga()
+        +Desliga()
     }
 
     iPhone --> Ipod
