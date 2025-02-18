@@ -41,3 +41,50 @@ Crie uma hierarquia de classes que definam os tipos de usuários de um sistema, 
 - A classe Gerente deve ter os métodos Gerar relatório financeiro, Consultar vendas, Realizar login, Realizar logff, alterar dados, alterar senha;
 - A classe Vendedor deve ter os métodos Realizar venda ( incrementar o número de vendas quando acionado), Consultar vendas, Realizar login, Realizar logoff, alterar dados, alterar senha;
 - A classe Atendente deve ter os métodos Receber pagamentos (onde o método recebe um valor que deve ser incrementado no valor em caixa), Fechar o caixa, Realizar Login, Realizar logoff, alterar dados e alterar senha;
+
+## ModelandoIphone
+
+### Modelagem e Diagramação de um Componente iPhone
+
+Neste desafio, você será responsável por modelar e diagramar a representação UML do componente iPhone, abrangendo suas funcionalidades como Reprodutor Musical, Aparelho Telefônico e Navegador na Internet.
+
+#### Contexto
+Com base no vídeo de lançamento do iPhone de 2007 (link abaixo), você deve elaborar a diagramação das classes e interfaces utilizando uma ferramenta UML de sua preferência. Em seguida, implemente as classes e interfaces no formato de arquivos `.java`.
+
+[Lançamento iPhone 2007](https://www.youtube.com/watch?v=9ou608QQRq8)
+
+### Objetivo
+1. Criar um diagrama UML que represente as funcionalidades descritas acima.
+2. Implementar as classes e interfaces correspondentes em Java (Opcional).
+
+### Diagrama UML Iphone (Mermaid)
+```mermaid
+classDiagram
+    class Ipod {
+        +TocarMusica()
+        +PausarMusica()
+        +SelecionarMusica(String musica)
+    }
+
+    class Telefone {
+        +FazerChamada(String numero)
+        +Atender()
+        +IniciarCorreioVoz()
+    }
+
+    class Internet {
+        +ExibirPagina(String url)
+        +AdicionarNovaAba()
+        +AtualizarPagina()
+    }
+
+    class iPhone {
+        +String modelo
+        +Ligar()
+        +Desligar()
+    }
+
+    iPhone --> Ipod
+    iPhone --> Telefone
+    iPhone --> Internet
+```
