@@ -72,7 +72,7 @@ classDiagram
         +IniciarCorreioVoz()
     }
 
-    class NavegadorInternet {
+    class Internet {
         +ExibirPagina(String url)
         +AdicionarNovaAba()
         +AtualizarPagina
@@ -81,7 +81,7 @@ classDiagram
     class iPhone {
     }
 
-    iPhone --> ReprodutorMusical
-    iPhone --> AparelhoTelefonico
-    iPhone --> NavegadorInternet
+    iPhone -> Ipod
+    iPhone -> Telefone
+    iPhone -> Internet
 ```
