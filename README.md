@@ -67,7 +67,7 @@ classDiagram
     }
 
     class Telefone {
-        +Ligar(String numero)
+        +FazerChamada(String numero)
         +Atender()
         +IniciarCorreioVoz()
     }
