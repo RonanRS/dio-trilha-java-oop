@@ -67,8 +67,8 @@ classDiagram
     }
 
     class Telefone {
-        +Liga(String numero)
-        +Atende()
+        +Ligar(String numero)
+        +Atender()
         +IniciarCorreioVoz()
     }
 
@@ -80,8 +80,8 @@ classDiagram
 
     class iPhone {
         +String modelo
-        +Liga()
-        +Desliga()
+        +Ligar()
+        +Desligar()
     }
 
     iPhone --> Ipod
